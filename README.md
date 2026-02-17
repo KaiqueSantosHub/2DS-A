@@ -9,28 +9,28 @@ Repositório com os conteúdos, atividades, projetos e aprendizados do **2º ano
 ### 💻 DS (Desenvolvimento de Sistemas)
 Disciplina focada no desenvolvimento de sistemas mais estruturados, aplicando lógica de programação, organização de código e boas práticas.
 
-📂 Acesse: `./DS`
+
 
 ---
 
 ### 🌐 PW2 (Programação Web 2)
 Desenvolvimento de aplicações web mais completas, integração com banco de dados e utilização de back-end.
 
-📂 Acesse: `./PW2`
+
 
 ---
 
 ### 🗄️ BD2 (Banco de Dados 2)
 Modelagem de dados, normalização e criação de consultas SQL mais avançadas para integração com sistemas.
 
-📂 Acesse: `./BD2`
+
 
 ---
 
 ### 📱 PAM (Programação de Aplicativos Mobile)
 Desenvolvimento de aplicativos, explorando interface, lógica e integração com banco de dados e APIs.
 
-📂 Acesse: `./PAM`
+
 
 ---
 

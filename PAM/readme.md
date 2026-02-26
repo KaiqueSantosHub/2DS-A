@@ -39,6 +39,7 @@ Depende da tecnologia utilizada.
 
 ## ⚙️ Requisitos
 
-- Android Studio
+- IDE (android, vscode etc)
 - Java
+- React Native
 - Emulador Android ou dispositivo físico

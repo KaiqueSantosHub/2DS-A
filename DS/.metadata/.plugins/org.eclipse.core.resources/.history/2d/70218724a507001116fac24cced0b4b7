@@ -1,0 +1,26 @@
+
+public class JogoDaVelha {
+	
+	static String[][] tabuleiro = { {" ", " ", " "}, {" ", " ", " "}, {" ", " ", " "} }; //Criação do tabuleiro com o metodo static 
+
+	public static void main(String[] args) {
+		exibirTabuleiro();
+	}
+		
+		static void exibirTabuleiro() {
+			for(String[] linha : tabuleiro) {
+				for(String coluna : linha) {
+					System.out.print("| "+ coluna);
+				}
+				System.out.println("|");
+			}
+		}
+		
+		static void checarVitoria(String jogador) {
+			
+		}
+		
+		
+	}
+
+

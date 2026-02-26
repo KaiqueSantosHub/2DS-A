@@ -1,0 +1,29 @@
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		final int TAM=4, TAM2=4;
+		int [] [] matriz  = new int[TAM][TAM2];
+		int i,j, soma=0,somaTotal=0,auxiliarSoma=1;
+		
+		for(i=0;i<4;i++) {
+			for(j=0;j<4;j++) {
+				matriz[i][j] = soma+1;
+				soma=soma+1;
+				somaTotal=somaTotal+auxiliarSoma;
+				auxiliarSoma++;
+			}
+		}
+		
+		for(i=0;i<4;i++) {
+			for(j=0;j<4;j++) {
+				System.out.print(matriz[i][j]+ " ");
+			}
+			System.out.println();
+		}
+		System.out.println("A soma de todos os números da tabela é "+somaTotal);
+
+
+	}
+
+}

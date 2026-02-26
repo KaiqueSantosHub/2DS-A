@@ -1,0 +1,45 @@
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		final int TAM=4, TAM2=4, TAM3 = 4;
+		int [] [] matriz  = new int[TAM][TAM2];
+		int i,j,k, soma=0, valor=1, numeroDiagonal[];
+		
+		numeroDiagonal = new int[TAM3];
+		
+		for(i=0;i<4;i++) {
+			for(j=0;j<4;j++) {
+				matriz[i][j] = soma+1;
+				soma=soma+1;
+			}
+		}
+		
+		for(k=0;k<TAM3;k++) {
+			
+			numeroDiagonal[k] = valor;
+			valor=valor+5;
+			
+		}
+		
+		
+		
+		for(i=0;i<4;i++) {
+			for(j=0;j<4;j++) {
+				System.out.print(matriz[i][j]+ " ");
+			}
+			System.out.println();
+		}
+		
+		System.out.print("Os números da diagonal principal da tabela são: ");
+		
+		for(k=0;k<TAM3;k++) {
+			System.out.println(numeroDiagonal[k]+ " ");
+		}
+		 
+		
+		
+
+	}
+
+}

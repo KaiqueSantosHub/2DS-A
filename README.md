@@ -37,9 +37,10 @@ Desenvolvimento de aplicativos, explorando interface, lógica e integração com
 ## 🚀 Tecnologias Utilizadas
 
 - Node.js
-- Java
+- Java (POO)
 - SQL
 - JavaScript
+- React Native
 
 ---
 

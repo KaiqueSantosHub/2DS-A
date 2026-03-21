@@ -1,0 +1,15 @@
+
+
+inicia o node -----> npm init -y
+instala o express -----> npm install express
+instala o nodemon -----> npm install -g nodemon
+instala o ejs -----> npm install ejs
+
+code .
+
+Para executar a aplicação a partir de agora, digite:
+nodemon app.js
+
+
+Para visualizar o projeto:
+Abrir o navegador e digitar localhost:8081

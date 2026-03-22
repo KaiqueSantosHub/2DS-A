@@ -7,26 +7,40 @@ app.set('view engine', 'ejs')
 
 
 app.get("/", function(req, res) {
-    const n1 = 8;
-    const n2 =2;
+
+    const temDados = req.query.n1 && req.query.n2;
+
+
+    if (temDados) {
+
+    const n1 = Number(req.query.n1) || "valor";
+    const n2 = Number(req.query.n2) || "valor";
 
     const soma = n1+n2;
     const sub = n1-n2;
     const multi = n1*n2;
     const div = n1/n2;
 
-    res.render("index", {
+    return res.render("index", {
         numero1: n1,
         numero2: n2,
         adicao: soma,
         subtracao: sub,
         multiplicacao: multi,
-        divisao: div
+        divisao: div,
+        mostrarResultado: true
     });
+    }
+
+     res.render("index", {
+        mostrarResultado:false
+    })
+
+    
 });
 
 app.get("/reajuste", function(req, res) {
-    const valor = 250;
+    const valor = Number(req.query.valor);
 
     const reajuste = (valor*10)/100;
     const novoValor = valor+reajuste;
@@ -39,8 +53,8 @@ app.get("/reajuste", function(req, res) {
 });
 
 app.get("/aluno", function(req, res) {
-    let nome = "José";
-    let peso = 85;
+    let nome = req.query.nome;
+    let peso = Number(req.query.peso);
     
     res.render("aluno", {
         nome: nome,

@@ -10,11 +10,22 @@
     <a href="/aluno">Aluno</a>
     <a href="/reajuste">Reajuste</a>
 
+    
+<form action="/" method="get">
+    <input type="number" name="n1" placeholder="Coloque o 1º número" required>
+    <input type="number" name="n2" placeholder="Coloque o 2º número" required>
+    <button type="submit"> Calcular</button>
+</form>
+
+
+    <% if (mostrarResultado) { %>
+
+        <h1>Resultado:</h1>
     <h1><%= numero1 %> + <%= numero2 %> = <%= adicao %></h1>
     <h1><%= numero1 %> - <%= numero2 %> = <%= subtracao %></h1>
     <h1><%= numero1 %> * <%= numero2 %> = <%= multiplicacao %></h1>
     <h1><%= numero1 %> / <%= numero2 %> = <%= divisao %></h1>
-    
+    <% } %>
 
     
 </body>

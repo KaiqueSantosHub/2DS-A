@@ -9,6 +9,11 @@
 
      <a href="/">Página Inicial</a>
     <a href="/aluno">Aluno</a>
+
+    <form action="/reajuste" method="get">
+        <input type="number" name="valor" placeholder="Digite o valor a ser reajustado em 10%">
+         <button type="submit">Calcule</button>
+    </form>
     
     <h1> O reajuste de 10% de <%= valor%>,00 R$ foi para <%= novoValor%>,00 R$ </h1>
     

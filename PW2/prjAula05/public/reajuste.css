@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Ubuntu:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #e1bee7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 50px;
+}
+
+
+.formsResultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.opcao {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(180deg, #6fa1eb, #5c8ddf);
+    padding: 40px 30px;
+    border-radius: 25px;
+    align-items: center;
+    width: 200px;
+}
+
+
+.opcao h1 {
+    margin: 0 0 15px 0;
+    text-align: center;
+    color: #2d2d2d;
+}
+
+
+.opcao a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    width: 140px;
+    height: 45px;
+    background: linear-gradient(135deg, #7b61ff, #5a43d6);
+    border-radius: 25px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.opcao a:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #6c55f5, #4c35c2);
+}
+
+
+form {
+    background: #ffffff;
+    width: 350px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+input,
+button {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background: #7b61ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a43d6;
+}
+
+
+.resultado {
+    margin-top: 20px;
+    width: 350px;
+
+  
+    display: none;
+}
+
+
+.resultado.ativo {
+    display: block;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    animation: aparecer 0.5s ease;
+}
+
+
+.resultado h1 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

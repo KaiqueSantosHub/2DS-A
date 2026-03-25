@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Método de Pagamento</title>
+    <link rel="stylesheet" href="/pagamento.css">
+</head>
+<body>
+
+    <div class="conteiner">
+
+    <div class="opcao">
+        <h1>Navegação</h1>
+        <a href="/reajuste"> Reajuste </a>
+        <a href="/imc"> IMC </a>
+        <a href="/Aluno"> Aluno </a>
+    </div>
+
+    <div class="formsResultado">
+
+    <form action="/pagamento" method="get">
+        <label for="opcao"> Valor do produto:</label>
+        <input type="number" name="valor" step="0.01" min="0" placeholder="Preço">
+        <label for="opcao">Forma de Pagamento:</label>
+        <select name="opcao" id="opcao">
+            <option value="1">À Vista em Dinheiro ou Pix, recebe 15% de desconto</option>
+            <option value="2"> À Vista no cartão de crédito, recebe 10% de desconto</option>
+            <option value="3">Parcelado no cartão em duas vezes</option>
+        </select>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    
+    <% if (mostrarDados) { %>
+    
+   <% if(opcao == 1) { %> 
+        <p>O valor a ser pago com desconto é de <R1><%= reajusteDinheiro %></p></R1>
+    <% } else if (opcao == 2) { %>
+        <p>O valor a ser pago com desconto é de <r1><%= reajusteCredito %></r1></p>
+    <% } else if (opcao == 3) { %>
+        <p>Você pagará parcelado em duas vezes sem juros (parcela de 2x de <%= valor/2 %>)</p>
+    <% } %>
+
+    <% } %>
+    
+   </div>
+</div>
+</body>
+</html>

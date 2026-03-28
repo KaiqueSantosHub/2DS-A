@@ -1,56 +1,50 @@
 USE dbEscola;
 
--- Exercício 1
+-- ExercÃ­cio 1
 SELECT nomeAluno AS 'Nome' , rgAluno AS RG, dataNascimentoAluno AS 'Data de Nascimento' FROM tbAluno
 WHERE naturalidadeAluno IN ('SP');
 
--- Exercício 2
+-- ExercÃ­cio 2
 SELECT nomeAluno AS Nome, rgAluno AS RG FROM tbAluno
 WHERE nomeAluno LIKE 'P%';
 
--- Exercício 3
+-- ExercÃ­cio 3
 SELECT nomeCurso AS Nome FROM tbCurso
 WHERE cargaHorariaCurso>2000;
 
--- Exercício 4
+-- ExercÃ­cio 4
 SELECT nomeAluno AS Nome, rgAluno AS RG FROM tbAluno
 WHERE nomeAluno LIKE '%Silva%';
 
--- Exercício 5
+-- ExercÃ­cio 5
 SELECT nomeAluno AS Nome, dataNascimentoAluno AS 'Data de Nascimento' FROM tbAluno
 WHERE MONTH(dataNascimentoAluno) = 03;
 
--- Exercício 6
-SELECT idAluno,dataMatricula 'Data da Matrícula' FROM tbMatricula
+-- ExercÃ­cio 6
+SELECT idAluno,dataMatricula 'Data da MatrÃ­cula' FROM tbMatricula
 WHERE MONTH(dataMatricula) = 05;
 
--- Exercício 7
-
-
-
+-- ExercÃ­cio 7
 SELECT idAluno FROM tbMatricula
 WHERE idTurma IN (
 	SELECT idTurma FROM tbTurma
 	WHERE idCurso = (
 		SELECT idCurso FROM tbCurso
-		WHERE nomeCurso = 'Inglês'
+		WHERE nomeCurso = 'InglÃªs'
 	)
 )
 
-
-
--- Exercício 8
+-- ExercÃ­cio 8
 SELECT idAluno FROM tbMatricula
 WHERE idTurma IN (
 	SELECT idTurma FROM tbTurma
 	WHERE nomeTurma = '1AA'
 )
 
-
--- Exercício 9
+-- ExercÃ­cio 9
 SELECT * FROM tbAluno;
 
--- Exercício 10
+-- ExercÃ­cio 10
 SELECT * FROM tbTurma;
 
 

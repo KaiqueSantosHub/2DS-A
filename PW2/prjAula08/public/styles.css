@@ -1,0 +1,189 @@
+/* ===========================
+   Cadastro de Funcionário
+   CSS sem classes — seletores por tag e hierarquia
+   =========================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0ede6;
+  color: #1a1a18;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* ---- Formulário ---- */
+form {
+  background: #ffffff;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+form h1 {
+  background: #26215C;
+  padding: 1.5rem 2rem;
+  font-size: 18px;
+  font-weight: 500;
+  color: #EEEDFE;
+}
+
+/* ---- Divs diretas do form (campos) ---- */
+form > div {
+  padding: 0 2rem;
+}
+
+form > div:first-of-type {
+  padding-top: 1.5rem;
+}
+
+form > div:last-of-type {
+  padding-bottom: 1.5rem;
+}
+
+/* ---- Labels ---- */
+label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #5F5E5A;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ---- Inputs e selects ---- */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+select {
+  height: 36px;
+  border: 0.5px solid rgba(0, 0, 0, 0.18);
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1a1a18;
+  background: #ffffff;
+  width: 100%;
+  margin-bottom: 12px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none;
+  border-color: #7F77DD;
+  box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.12);
+}
+
+input::placeholder {
+  color: #B4B2A9;
+}
+
+input[type="radio"] {
+  accent-color: #534AB7;
+  margin-right: 6px;
+}
+
+/* ---- Botão de envio ---- */
+button[type="submit"] {
+  width: 100%;
+  height: 44px;
+  background: #534AB7;
+  color: #EEEDFE;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.15s;
+}
+
+button[type="submit"]:hover {
+  background: #3C3489;
+}
+
+/* ---- Parágrafos de resultado ---- */
+p {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 6px 1.5rem;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+  background: #ffffff;
+}
+
+p:first-of-type {
+  background: #085041;
+  border-radius: 16px 16px 0 0;
+  padding: 10px 1.5rem;
+  color: #9FE1CB;
+  font-weight: 500;
+  border-bottom: none;
+}
+
+p:last-of-type {
+  border-radius: 0 0 16px 16px;
+  padding-bottom: 12px;
+}
+
+p b {
+  color: #888780;
+  font-weight: 400;
+}
+
+p span {
+  color: #1a1a18;
+  font-weight: 500;
+}
+
+/* ---- Faixas coloridas de seção (via atributo style no HTML) ---- */
+/* Dados pessoais  → background: #EEEDFE; color: #534AB7  */
+/* Endereço        → background: #E1F5EE; color: #0F6E56  */
+/* Docs e contato  → background: #FAEEDA; color: #633806  */
+
+/* ---- Grids (via atributo style no HTML) ---- */
+/* grid-template-columns: 1fr 1fr  → dois campos lado a lado */
+/* grid-template-columns: 1fr 2fr  → CEP + logradouro       */
+
+/* ---- Responsivo ---- */
+@media (max-width: 520px) {
+  form > div[style*="grid"] {
+    display: block !important;
+  }
+
+  form > div[style*="grid"] > div {
+    margin-bottom: 12px;
+  }
+
+  form > div[style*="grid"] > div input,
+  form > div[style*="grid"] > div select {
+    margin-bottom: 0;
+  }
+
+  form > div {
+    padding: 0 1.25rem;
+  }
+
+  form h1 {
+    padding: 1.25rem;
+  }
+
+  p {
+    padding: 6px 1.25rem;
+  }
+}

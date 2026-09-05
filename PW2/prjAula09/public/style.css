@@ -1,0 +1,194 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #f0f4f8;
+  color: #1e293b;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+
+.dashboard {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+
+.tag-hospital {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 6px 16px;
+  border: 0.5px solid #e2e8f0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #475569;
+  width: fit-content;
+  letter-spacing: 0.02em;
+}
+
+.tag-hospital::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
+
+
+.topo {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-senha {
+  background: #ffffff;
+  border: 0.5px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 1rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 220px;
+}
+
+.card-senha h3 {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.senha-cliente {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e3a5f;
+  letter-spacing: -0.5px;
+}
+
+
+.painel-principal {
+  background: #1e3a5f;
+  border-radius: 22px;
+  padding: 3.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.legenda {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #7dd3fc;
+  text-transform: uppercase;
+}
+
+.senha-display {
+  font-size: 120px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.mensagem {
+  background: #fefce8;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: #92400e;
+  line-height: 1.5;
+}
+
+
+.acoes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.acoes-grid button {
+  border: none;
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.12s ease, box-shadow 0.12s ease;
+  line-height: 1.3;
+}
+
+.acoes-grid button:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.acoes-grid button:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+.btn-retirar {
+  background: #0ea5e9;
+  color: #ffffff;
+}
+
+.btn-verificar {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-proximo {
+  background: #1e3a5f;
+  color: #ffffff;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 420px) {
+  .acoes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .senha-display {
+    font-size: 80px;
+  }
+
+  .card-senha {
+    min-width: unset;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .topo {
+    justify-content: stretch;
+  }
+}

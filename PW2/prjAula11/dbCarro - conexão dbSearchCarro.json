@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "6b006e105c75375d5bb77f95"
+  },
+  "id": 1,
+  "modelo": "X6",
+  "fabricante": "BMW",
+  "valor": 890,
+  "ano de fabricacao": 2024
+},
+{
+  "_id": {
+    "$oid": "6b006e445c75375d5bb77f97"
+  },
+  "id": 2,
+  "modelo": "Q3",
+  "fabricante": "Audi",
+  "valor": 370,
+  "ano de fabricacao": 2026
+},
+{
+  "_id": {
+    "$oid": "6b006e5f5c75375d5bb77f99"
+  },
+  "id": 3,
+  "modelo": "Opala",
+  "fabricante": "GM",
+  "valor": 150,
+  "ano de fabricacao": 1990
+}]

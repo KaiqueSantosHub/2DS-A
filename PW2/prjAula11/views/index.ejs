@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+</head>
+<body>
+
+    <form action="carroPesquisado" method="POST">
+        <h1>Carros</h1>
+
+        <label for="modelo">Modelo</label>
+        <input type="text" id="carroModelo" name="carroModelo" placeholder="Digite o modelo do carro...">
+
+        <button type="submit" >pesquisar</button>
+
+        <button type="submit">mostrar todos</button>
+
+    </form>
+
+    <div class="mensagem">
+        <% if(carroByModelo) { %>
+              
+            <% carroByModelo.forEach(function(carro) { %>
+            <li>
+                <strong>id: </strong> <%= carro.id %>
+                <strong>modelo: </strong> <%= carro.modelo %>
+                <strong>fabricante: </strong> <%= carro.fabricante %>
+                <strong>valor: </strong> <%= carro.valor %>
+                <strong>ano de fabricação: </strong> <%= carro.anoFabricacao %>
+                
+            </li>
+        <% })   %>
+
+        <% } %>
+     </div>
+
+    
+</body>
+</html>

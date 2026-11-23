@@ -1,0 +1,153 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+/* CABEÇALHO */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1f2937;
+    border-bottom: 2px solid #374151;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #60a5fa;
+}
+
+header p {
+    color: #9ca3af;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* CONSULTAS */
+.consultas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #1f2937;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #374151;
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    color: #60a5fa;
+}
+
+.card p {
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #4b5563;
+    background-color: #111827;
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: #60a5fa;
+}
+
+/* BOTÕES */
+button {
+    padding: 12px 18px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* RESULTADOS */
+.resultado {
+    margin-top: 40px;
+}
+
+.resultado h2 {
+    margin-bottom: 20px;
+    color: #60a5fa;
+}
+
+#resultados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.carro {
+    background-color: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+}
+
+.carro h3 {
+    color: #60a5fa;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.carro p {
+    margin-bottom: 10px;
+    color: #d1d5db;
+}
+
+.mensagem {
+    color: #9ca3af;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    color: #9ca3af;
+    background-color: #1f2937;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+
+    .consultas {
+        grid-template-columns: 1fr;
+    }
+
+    #resultados {
+        grid-template-columns: 1fr;
+    }
+
+}
